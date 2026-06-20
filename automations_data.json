@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-20",
-  "loopCount": 28,
+  "loopCount": 33,
   "categories": [
     {
       "slug": "n8n",
@@ -949,6 +949,176 @@
       "published": "2026-06-20",
       "modified": "2026-06-20",
       "reviews": []
+    },
+    {
+      "number": "029",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Telegram AI Bot with NeurochainAI",
+      "slug": "telegram-ai-bot-with-neurochainai",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Telegram/Telegram%20AI%20Bot_%20NeurochainAI%20Text%20&%20Image%20-%20NeurochainAI%20Basic%20API%20Integration.json",
+      "license": "See source",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Integrates the NeurochainAI API inside Telegram to offer text and image generation directly in your chat threads.",
+      "useWhen": "When you want an affordable, custom-branded Telegram bot that handles both text chat and image creation.",
+      "trigger": "New message in Telegram chat",
+      "steps": [
+        "Listen for a new message in Telegram.",
+        "Route the prompt to NeurochainAI text/image generation nodes.",
+        "Parse the API response.",
+        "Reply to the user in Telegram with text or image attachment."
+      ],
+      "keywords": [
+        "telegram",
+        "bot",
+        "neurochainai",
+        "image-generation",
+        "text-generation"
+      ],
+      "implementationNote": "Requires setting up your Telegram bot token and NeurochainAI API key.",
+      "published": "2026-06-20",
+      "modified": "2026-06-20"
+    },
+    {
+      "number": "030",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Detect toxic language in Telegram messages",
+      "slug": "detect-toxic-language-in-telegram-messages",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Telegram/Detect%20toxic%20language%20in%20Telegram%20messages.json",
+      "license": "See source",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Monitors active Telegram chats, analyzes message text for toxicity using moderation AI, and flags/reports violations.",
+      "useWhen": "For community managers looking to automatically moderate chat channels and keep interactions constructive.",
+      "trigger": "New message in moderated Telegram group",
+      "steps": [
+        "Monitor Telegram group updates.",
+        "Send message content to OpenAI/moderation API.",
+        "Evaluate score against toxic language threshold.",
+        "If toxic, notify administrators or take delete/warn actions."
+      ],
+      "keywords": [
+        "moderation",
+        "telegram",
+        "security",
+        "toxic language",
+        "openai"
+      ],
+      "implementationNote": "Customize the toxicity thresholds to balance safe communities with false positives.",
+      "published": "2026-06-20",
+      "modified": "2026-06-20"
+    },
+    {
+      "number": "031",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Translate Telegram audio messages with AI (55 languages)",
+      "slug": "translate-telegram-audio-messages-with-ai-55-languages",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Telegram/Translate%20Telegram%20audio%20messages%20with%20AI%20(55%20supported%20languages).json",
+      "license": "See source",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Receives audio/voice messages in Telegram, transcribes them using speech-to-text (Whisper), translates them into 55 support languages, and replies back.",
+      "useWhen": "When conducting multi-lingual communications or support over voice notes.",
+      "trigger": "New voice/audio message in Telegram",
+      "steps": [
+        "Receive Telegram voice message file.",
+        "Download and transcribe with OpenAI Whisper.",
+        "Translate transcribed text to target language via LLM.",
+        "Send translation reply back to Telegram chat."
+      ],
+      "keywords": [
+        "whisper",
+        "speech-to-text",
+        "translation",
+        "telegram",
+        "audio"
+      ],
+      "implementationNote": "Large voice messages might hit model size limits, optimize chunk size if necessary.",
+      "published": "2026-06-20",
+      "modified": "2026-06-20"
+    },
+    {
+      "number": "032",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Hacker News Throwback Machine",
+      "slug": "hacker-news-throwback-machine",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Other_Integrations_and_Use_Cases/Hacker%20News%20Throwback%20Machine%20-%20See%20What%20Was%20Hot%20on%20This%20Day,%20Every%20Year!.json",
+      "license": "See source",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Cuts through the noise to fetch the top-voted Hacker News posts from exactly 1, 2, 5, or 10 years ago today.",
+      "useWhen": "For retro-tech enthusiasts or anyone compiling curated newsletters on historical tech discussions.",
+      "trigger": "Scheduled Cron (Daily)",
+      "steps": [
+        "Calculate matching retro dates (1, 2, 5, 10 years ago).",
+        "Query Algolia HN API for high-score items on those dates.",
+        "Format the results into a daily throwback brief.",
+        "Publish to Slack, email, or Notion."
+      ],
+      "keywords": [
+        "hacker news",
+        "retro",
+        "cron",
+        "slack",
+        "newsletter"
+      ],
+      "implementationNote": "Maintains an engaging tech history logger automatically.",
+      "published": "2026-06-20",
+      "modified": "2026-06-20"
+    },
+    {
+      "number": "033",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Siri AI Agent with Apple Shortcuts",
+      "slug": "siri-ai-agent-with-apple-shortcuts",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Other_Integrations_and_Use_Cases/Siri%20AI%20Agent_%20Apple%20Shortcuts%20powered%20voice%20template.json",
+      "license": "See source",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Bridges iOS Siri voice shortcuts to a powerful agentic backend in n8n, enabling deep custom commands via voice.",
+      "useWhen": "For voice-activated smart home commands or hands-free task triggers on iPhones.",
+      "trigger": "iOS Apple Shortcut webhook call",
+      "steps": [
+        "Receive Siri shortcut webhook payload.",
+        "Parse voice input transcripts.",
+        "Call LLM Agent with tool calling to process request.",
+        "Return custom speech response text to Siri for voice synthesis."
+      ],
+      "keywords": [
+        "siri",
+        "shortcuts",
+        "webhook",
+        "voice-agent",
+        "ios"
+      ],
+      "implementationNote": "Requires setting up an Apple Shortcut to capture audio and trigger the webhook.",
+      "published": "2026-06-20",
+      "modified": "2026-06-20"
     }
   ]
 }

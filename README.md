@@ -1,6 +1,6 @@
 # ⚙️ Automation-Bazaar: The Curated Automation Workflows Directory
 
-Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **28** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
+Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **33** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
 
 *Last updated: 2026-06-20 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
 
@@ -50,6 +50,11 @@ Sorted by rating. Click a title for full setup details.
 | #016 | Zapier | [Incoming email → task/to-do](zapier/incoming-email-task-to-do.md) | Zapier (examples) | ★★★★☆ 4.5 | Turns starred/labeled emails into tasks in your project tool. |
 | #018 | Zapier | [Calendly booking → CRM + reminder](zapier/calendly-booking-crm-reminder.md) | Ringover (zap examples) | ★★★★☆ 4.5 | On a new Calendly booking, creates/updates a CRM record and schedules reminders. |
 | #028 | Other Platforms | [Airflow daily ETL DAG](other-platforms/airflow-daily-etl-dag.md) | Apache Airflow Docs | ★★★★☆ 4.5 | An orchestrated daily extract-transform-load pipeline with retries and alerting. |
+| #029 | n8n | [Telegram AI Bot with NeurochainAI](n8n/telegram-ai-bot-with-neurochainai.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Integrates the NeurochainAI API inside Telegram to offer text and image generation directly in your chat threads. |
+| #030 | n8n | [Detect toxic language in Telegram messages](n8n/detect-toxic-language-in-telegram-messages.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Monitors active Telegram chats, analyzes message text for toxicity using moderation AI, and flags/reports violations. |
+| #031 | n8n | [Translate Telegram audio messages with AI (55 languages)](n8n/translate-telegram-audio-messages-with-ai-55-languages.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Receives audio/voice messages in Telegram, transcribes them using speech-to-text (Whisper), translates them into 55 support languages, and replies back. |
+| #032 | n8n | [Hacker News Throwback Machine](n8n/hacker-news-throwback-machine.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Cuts through the noise to fetch the top-voted Hacker News posts from exactly 1, 2, 5, or 10 years ago today. |
+| #033 | n8n | [Siri AI Agent with Apple Shortcuts](n8n/siri-ai-agent-with-apple-shortcuts.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Bridges iOS Siri voice shortcuts to a powerful agentic backend in n8n, enabling deep custom commands via voice. |
 | #008 | n8n | [WhatsApp inbound automation](n8n/whatsapp-inbound-automation.md) | n8n community | ★★★★☆ 4.4 | Handles inbound WhatsApp messages, routes by intent, and replies or creates a ticket. |
 | #011 | Make.com | [Email parser → Airtable](make-com/email-parser-airtable.md) | Make Templates | ★★★★☆ 4.4 | Parses structured emails (orders, alerts) and writes records into Airtable. |
 | #013 | Make.com | [Multi-channel social scheduler](make-com/multi-channel-social-scheduler.md) | Make Templates | ★★★★☆ 4.4 | Takes a content row and publishes/schedules it across several social platforms. |
@@ -60,7 +65,7 @@ Sorted by rating. Click a title for full setup details.
 | #025 | Schedules & Cron | [Hourly inbox/RSS poll](schedules-cron/hourly-inbox-rss-poll.md) | Community | ★★★★☆ 4.2 | A cron schedule that polls inboxes/feeds to drive downstream automations. |
 
 ## 🗂️ Categories
-- [n8n](n8n/README.md) (8)
+- [n8n](n8n/README.md) (13)
 - [Make.com](make-com/README.md) (5)
 - [Zapier](zapier/README.md) (6)
 - [Automation Scripts](scripts/README.md) (4)
