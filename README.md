@@ -1,5 +1,7 @@
 # ⚙️ Automation-Bazaar: The Curated Automation Workflows Directory
 
+[![Mega AI Bazaar](https://img.shields.io/badge/🌐_Mega_AI_Bazaar-browse_all-6C5CE7)](https://drvivek34.github.io/Mega-AI-Bazaar/)
+
 Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **33** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
 
 *Last updated: 2026-06-20 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
