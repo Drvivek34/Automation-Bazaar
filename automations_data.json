@@ -1,0 +1,954 @@
+{
+  "updated": "2026-06-20",
+  "loopCount": 28,
+  "categories": [
+    {
+      "slug": "n8n",
+      "label": "n8n"
+    },
+    {
+      "slug": "make-com",
+      "label": "Make.com"
+    },
+    {
+      "slug": "zapier",
+      "label": "Zapier"
+    },
+    {
+      "slug": "scripts",
+      "label": "Automation Scripts"
+    },
+    {
+      "slug": "schedules-cron",
+      "label": "Schedules & Cron"
+    },
+    {
+      "slug": "other-platforms",
+      "label": "Other Platforms"
+    }
+  ],
+  "loops": [
+    {
+      "number": "001",
+      "slug": "ai-email-auto-responder-gmail-gpt-4-claude",
+      "title": "AI email auto-responder (Gmail + GPT-4/Claude)",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates",
+      "license": "See source",
+      "averageRating": 4.8,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Reads incoming Gmail, classifies by topic/urgency with an LLM, and drafts a context-aware reply for review.",
+      "useWhen": "When your inbox needs triage and first-draft replies at scale.",
+      "trigger": "New email in Gmail",
+      "steps": [
+        "Trigger on new Gmail message",
+        "Classify topic + urgency with GPT-4/Claude",
+        "Draft a reply from a template + context",
+        "Save as draft or send after approval"
+      ],
+      "implementationNote": "Keep a human-approval step until reply quality is trusted.",
+      "keywords": [
+        "gmail",
+        "email triage",
+        "llm",
+        "auto-reply"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "002",
+      "slug": "rag-chatbot-over-a-company-knowledge-base",
+      "title": "RAG chatbot over a company knowledge base",
+      "author": "n8n Team (templates)",
+      "source": "https://n8n.io/workflows/",
+      "license": "See source",
+      "averageRating": 4.9,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Retrieval-augmented chatbot that embeds your docs into a vector store (Pinecone/Qdrant/Supabase) and answers from them.",
+      "useWhen": "When you need a grounded assistant that answers from your own content.",
+      "trigger": "Chat message / webhook",
+      "steps": [
+        "Ingest + chunk documents",
+        "Embed and upsert to a vector DB",
+        "On query, retrieve top-k context",
+        "Answer with the LLM citing sources"
+      ],
+      "implementationNote": "Re-index on document changes to avoid stale answers.",
+      "keywords": [
+        "rag",
+        "vector store",
+        "chatbot",
+        "pinecone",
+        "qdrant"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "003",
+      "slug": "blog-post-linkedin-x-newsletter-repurposer",
+      "title": "Blog post → LinkedIn/X/newsletter repurposer",
+      "author": "enescingoz (awesome-n8n-templates)",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates",
+      "license": "See source",
+      "averageRating": 4.7,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Turns one blog post into platform-tailored LinkedIn posts, tweets, and an email newsletter draft.",
+      "useWhen": "When you want to repurpose long-form content into many channels.",
+      "trigger": "New blog post (RSS/CMS)",
+      "steps": [
+        "Fetch the new post",
+        "Summarize + rewrite per platform with an LLM",
+        "Generate variants",
+        "Queue/schedule to each channel"
+      ],
+      "implementationNote": "Add brand-voice guidelines to the prompt for consistency.",
+      "keywords": [
+        "content repurposing",
+        "social media",
+        "linkedin",
+        "newsletter"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "004",
+      "slug": "telegram-ai-assistant-bot",
+      "title": "Telegram AI assistant bot",
+      "author": "n8n community",
+      "source": "https://n8n.io/workflows/",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "A Telegram bot backed by an LLM with memory, for Q&A and task commands.",
+      "useWhen": "When you want a personal assistant in Telegram.",
+      "trigger": "Telegram message",
+      "steps": [
+        "Receive Telegram update",
+        "Load short-term memory",
+        "Call the LLM",
+        "Reply in chat + persist memory"
+      ],
+      "implementationNote": "Scope the bot to allowed chat IDs to prevent abuse.",
+      "keywords": [
+        "telegram",
+        "bot",
+        "assistant",
+        "memory"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "005",
+      "slug": "invoice-pdf-data-extraction-to-google-sheets",
+      "title": "Invoice/PDF data extraction to Google Sheets",
+      "author": "Intuz (templates roundup)",
+      "source": "https://www.intuz.com/blog/best-n8n-workflow-templates",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Parses invoice PDFs, extracts line items with an LLM/OCR, and appends structured rows to Google Sheets.",
+      "useWhen": "When you process many invoices/receipts manually.",
+      "trigger": "New file in Drive/email attachment",
+      "steps": [
+        "Detect new PDF",
+        "OCR / LLM-extract fields",
+        "Validate totals",
+        "Append row to Google Sheets"
+      ],
+      "implementationNote": "Add a confidence threshold and route low-confidence docs for review.",
+      "keywords": [
+        "ocr",
+        "invoices",
+        "google sheets",
+        "data extraction"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "006",
+      "slug": "daily-ai-news-digest-to-email-slack",
+      "title": "Daily AI news digest to email/Slack",
+      "author": "ai-rockstars (templates roundup)",
+      "source": "https://ai-rockstars.com/the-10-best-n8n-workflow-templates-for-automation/",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Aggregates RSS/news sources, summarizes with an LLM, and sends a daily digest.",
+      "useWhen": "When you want a curated morning briefing.",
+      "trigger": "Schedule (daily)",
+      "steps": [
+        "Pull configured feeds",
+        "De-dupe + rank items",
+        "Summarize with the LLM",
+        "Send digest to email/Slack"
+      ],
+      "implementationNote": "Cap item count to keep the digest skimmable.",
+      "keywords": [
+        "rss",
+        "digest",
+        "summarization",
+        "newsletter"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "007",
+      "slug": "lead-enrichment-crm-sync",
+      "title": "Lead enrichment + CRM sync",
+      "author": "Goodspeed Studio (agency templates)",
+      "source": "https://goodspeed.studio/blog/n8n-templates",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Enriches new leads (company, role, socials) and upserts them into the CRM with a Slack alert.",
+      "useWhen": "When inbound leads need enrichment before sales follow-up.",
+      "trigger": "New lead (form/webhook)",
+      "steps": [
+        "Receive lead",
+        "Enrich via data provider",
+        "Upsert to CRM (HubSpot/Pipedrive)",
+        "Notify sales in Slack"
+      ],
+      "implementationNote": "Respect data-privacy rules for enrichment providers.",
+      "keywords": [
+        "lead enrichment",
+        "crm",
+        "hubspot",
+        "sales"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "008",
+      "slug": "whatsapp-inbound-automation",
+      "title": "WhatsApp inbound automation",
+      "author": "n8n community",
+      "source": "https://n8n.io/workflows/",
+      "license": "See source",
+      "averageRating": 4.4,
+      "category": {
+        "label": "n8n",
+        "slug": "n8n"
+      },
+      "platform": "n8n",
+      "description": "Handles inbound WhatsApp messages, routes by intent, and replies or creates a ticket.",
+      "useWhen": "When you support customers over WhatsApp.",
+      "trigger": "WhatsApp message",
+      "steps": [
+        "Receive message",
+        "Detect intent with the LLM",
+        "Reply or open a ticket",
+        "Log to CRM"
+      ],
+      "implementationNote": "Follow WhatsApp Business policy for automated messaging.",
+      "keywords": [
+        "whatsapp",
+        "support",
+        "routing",
+        "tickets"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "009",
+      "slug": "form-submission-crm-contact-slack-notify",
+      "title": "Form submission → CRM contact → Slack notify",
+      "author": "Make Templates",
+      "source": "https://www.make.com/en/templates",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "Make.com",
+        "slug": "make-com"
+      },
+      "platform": "Make.com",
+      "description": "Watches a form, creates/updates a CRM contact, and posts a notification to Slack.",
+      "useWhen": "When new form leads must reach your CRM and team instantly.",
+      "trigger": "New form submission",
+      "steps": [
+        "Watch form (Typeform/Tally)",
+        "Search/create CRM contact",
+        "Map fields",
+        "Post to Slack channel"
+      ],
+      "implementationNote": "Use a router to branch on lead source.",
+      "keywords": [
+        "make",
+        "forms",
+        "crm",
+        "slack"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "010",
+      "slug": "rss-ai-summary-notion",
+      "title": "RSS → AI summary → Notion",
+      "author": "Make Templates",
+      "source": "https://www.make.com/en/templates",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Make.com",
+        "slug": "make-com"
+      },
+      "platform": "Make.com",
+      "description": "Pulls new RSS items, summarizes with an AI module, and stores them in a Notion database.",
+      "useWhen": "When you build a curated reading database.",
+      "trigger": "New RSS item",
+      "steps": [
+        "Watch RSS feed",
+        "Summarize with AI",
+        "Create Notion page",
+        "Tag by topic"
+      ],
+      "implementationNote": "Add a dedupe filter on item GUID.",
+      "keywords": [
+        "make",
+        "rss",
+        "notion",
+        "summary"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "011",
+      "slug": "email-parser-airtable",
+      "title": "Email parser → Airtable",
+      "author": "Make Templates",
+      "source": "https://www.make.com/en/templates",
+      "license": "See source",
+      "averageRating": 4.4,
+      "category": {
+        "label": "Make.com",
+        "slug": "make-com"
+      },
+      "platform": "Make.com",
+      "description": "Parses structured emails (orders, alerts) and writes records into Airtable.",
+      "useWhen": "When inbound emails carry data you need in a table.",
+      "trigger": "New email matching a filter",
+      "steps": [
+        "Watch mailbox",
+        "Parse fields (text parser)",
+        "Map to Airtable schema",
+        "Create/Update record"
+      ],
+      "implementationNote": "Build the parser against several real samples.",
+      "keywords": [
+        "make",
+        "email parsing",
+        "airtable"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "012",
+      "slug": "webhook-payment-tag-crm-contact",
+      "title": "Webhook payment → tag CRM contact",
+      "author": "Make Templates",
+      "source": "https://www.make.com/en/templates",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Make.com",
+        "slug": "make-com"
+      },
+      "platform": "Make.com",
+      "description": "Receives a payment webhook, finds the customer, and tags/segments them in the CRM.",
+      "useWhen": "When purchases should trigger lifecycle segmentation.",
+      "trigger": "Payment webhook (Stripe)",
+      "steps": [
+        "Receive webhook",
+        "Lookup contact",
+        "Add tag / move stage",
+        "Trigger follow-up sequence"
+      ],
+      "implementationNote": "Verify webhook signatures before processing.",
+      "keywords": [
+        "make",
+        "stripe",
+        "webhook",
+        "crm"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "013",
+      "slug": "multi-channel-social-scheduler",
+      "title": "Multi-channel social scheduler",
+      "author": "Make Templates",
+      "source": "https://www.make.com/en/templates",
+      "license": "See source",
+      "averageRating": 4.4,
+      "category": {
+        "label": "Make.com",
+        "slug": "make-com"
+      },
+      "platform": "Make.com",
+      "description": "Takes a content row and publishes/schedules it across several social platforms.",
+      "useWhen": "When you publish the same content to many channels.",
+      "trigger": "New row in content sheet",
+      "steps": [
+        "Watch content sheet",
+        "Format per platform",
+        "Publish/schedule",
+        "Mark row as posted"
+      ],
+      "implementationNote": "Stagger post times to avoid duplicate-content penalties.",
+      "keywords": [
+        "make",
+        "social media",
+        "scheduling"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "014",
+      "slug": "brand-mention-on-x-slack-alert",
+      "title": "Brand mention on X → Slack alert",
+      "author": "Databox (21 zaps)",
+      "source": "https://databox.com/zapier-examples",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "Zapier",
+        "slug": "zapier"
+      },
+      "platform": "Zapier",
+      "description": "Notifies a Slack channel whenever your brand is mentioned on X/Twitter.",
+      "useWhen": "When you want real-time social listening.",
+      "trigger": "New tweet matching search",
+      "steps": [
+        "Trigger on matching tweet",
+        "Filter noise",
+        "Format message",
+        "Post to Slack"
+      ],
+      "implementationNote": "Use precise search operators to cut false positives.",
+      "keywords": [
+        "zapier",
+        "twitter",
+        "slack",
+        "social listening"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "015",
+      "slug": "new-lead-hubspot-slack-notify",
+      "title": "New lead → HubSpot + Slack notify",
+      "author": "Databox (21 zaps)",
+      "source": "https://databox.com/zapier-examples",
+      "license": "See source",
+      "averageRating": 4.7,
+      "category": {
+        "label": "Zapier",
+        "slug": "zapier"
+      },
+      "platform": "Zapier",
+      "description": "Adds new leads to HubSpot and pings sales in Slack.",
+      "useWhen": "When inbound leads must reach CRM + team fast.",
+      "trigger": "New lead (form/ads)",
+      "steps": [
+        "Trigger on new lead",
+        "Create/update HubSpot contact",
+        "Notify Slack",
+        "Optionally start a sequence"
+      ],
+      "implementationNote": "Map UTM fields for attribution.",
+      "keywords": [
+        "zapier",
+        "hubspot",
+        "leads",
+        "slack"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "016",
+      "slug": "incoming-email-task-to-do",
+      "title": "Incoming email → task/to-do",
+      "author": "Zapier (examples)",
+      "source": "https://zapier.com/blog/zapier-automation-examples/",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Zapier",
+        "slug": "zapier"
+      },
+      "platform": "Zapier",
+      "description": "Turns starred/labeled emails into tasks in your project tool.",
+      "useWhen": "When email is your informal task inbox.",
+      "trigger": "New labeled email",
+      "steps": [
+        "Trigger on labeled email",
+        "Extract subject/body",
+        "Create task (Todoist/Asana)",
+        "Link back to email"
+      ],
+      "implementationNote": "Use a dedicated label to avoid task spam.",
+      "keywords": [
+        "zapier",
+        "email",
+        "tasks",
+        "todoist"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "017",
+      "slug": "form-submission-google-sheets-row",
+      "title": "Form submission → Google Sheets row",
+      "author": "Zapier (examples)",
+      "source": "https://zapier.com/blog/zapier-automation-examples/",
+      "license": "See source",
+      "averageRating": 4.4,
+      "category": {
+        "label": "Zapier",
+        "slug": "zapier"
+      },
+      "platform": "Zapier",
+      "description": "Appends every new form response as a row in Google Sheets.",
+      "useWhen": "When you need a simple data log of submissions.",
+      "trigger": "New form submission",
+      "steps": [
+        "Trigger on submission",
+        "Map fields to columns",
+        "Append row",
+        "Optional Slack notify"
+      ],
+      "implementationNote": "Keep the sheet header in sync with form fields.",
+      "keywords": [
+        "zapier",
+        "forms",
+        "google sheets"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "018",
+      "slug": "calendly-booking-crm-reminder",
+      "title": "Calendly booking → CRM + reminder",
+      "author": "Ringover (zap examples)",
+      "source": "https://www.ringover.com/blog/zapier-workflow-automation",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Zapier",
+        "slug": "zapier"
+      },
+      "platform": "Zapier",
+      "description": "On a new Calendly booking, creates/updates a CRM record and schedules reminders.",
+      "useWhen": "When meetings should sync to CRM automatically.",
+      "trigger": "New Calendly event",
+      "steps": [
+        "Trigger on booking",
+        "Upsert CRM contact",
+        "Create calendar reminder",
+        "Send confirmation"
+      ],
+      "implementationNote": "Handle reschedules/cancellations with extra triggers.",
+      "keywords": [
+        "zapier",
+        "calendly",
+        "crm",
+        "reminders"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "019",
+      "slug": "sync-unsubscribes-across-email-systems",
+      "title": "Sync unsubscribes across email systems",
+      "author": "Getmagical (best zaps)",
+      "source": "https://www.getmagical.com/blog/best-zapier-automations",
+      "license": "See source",
+      "averageRating": 4.3,
+      "category": {
+        "label": "Zapier",
+        "slug": "zapier"
+      },
+      "platform": "Zapier",
+      "description": "Propagates an unsubscribe in one tool to all other email systems for compliance.",
+      "useWhen": "When you run multiple email platforms.",
+      "trigger": "New unsubscribe",
+      "steps": [
+        "Trigger on unsubscribe",
+        "Find contact in each system",
+        "Mark unsubscribed everywhere",
+        "Log change"
+      ],
+      "implementationNote": "Critical for CAN-SPAM/GDPR consistency.",
+      "keywords": [
+        "zapier",
+        "email",
+        "compliance",
+        "unsubscribe"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "020",
+      "slug": "nightly-restic-rsync-backup",
+      "title": "Nightly restic/rsync backup",
+      "author": "Community (restic docs)",
+      "source": "https://restic.readthedocs.io/",
+      "license": "See source",
+      "averageRating": 4.7,
+      "category": {
+        "label": "Automation Scripts",
+        "slug": "scripts"
+      },
+      "platform": "Automation Scripts",
+      "description": "Encrypted incremental backups of key paths to local + remote, with pruning and a status notification.",
+      "useWhen": "When you need reliable, versioned backups.",
+      "trigger": "Cron (nightly)",
+      "steps": [
+        "Snapshot configured paths",
+        "Push to repo (local + S3/B2)",
+        "Prune by retention policy",
+        "Notify on success/failure"
+      ],
+      "implementationNote": "Test restores regularly — an untested backup is a hope, not a backup.",
+      "keywords": [
+        "backup",
+        "restic",
+        "rsync",
+        "cron"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "021",
+      "slug": "let-s-encrypt-cert-auto-renew-reload",
+      "title": "Let's Encrypt cert auto-renew + reload",
+      "author": "Community (certbot)",
+      "source": "https://eff-certbot.readthedocs.io/",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "Automation Scripts",
+        "slug": "scripts"
+      },
+      "platform": "Automation Scripts",
+      "description": "Renews TLS certificates and reloads the web server only when a cert actually changes.",
+      "useWhen": "When you manage your own TLS certs.",
+      "trigger": "Cron / systemd timer",
+      "steps": [
+        "Run certbot renew",
+        "Detect changed certs",
+        "Reload nginx/apache",
+        "Alert on failure"
+      ],
+      "implementationNote": "Use --deploy-hook so reloads happen only on renewal.",
+      "keywords": [
+        "tls",
+        "certbot",
+        "lets encrypt",
+        "nginx"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "022",
+      "slug": "docker-prune-unhealthy-container-restart",
+      "title": "Docker prune + unhealthy-container restart",
+      "author": "Community",
+      "source": "https://docs.docker.com/",
+      "license": "See source",
+      "averageRating": 4.4,
+      "category": {
+        "label": "Automation Scripts",
+        "slug": "scripts"
+      },
+      "platform": "Automation Scripts",
+      "description": "Frees disk by pruning dangling images/volumes and restarts containers failing healthchecks.",
+      "useWhen": "When long-running Docker hosts drift or bloat.",
+      "trigger": "Cron (hourly/daily)",
+      "steps": [
+        "Prune dangling images/volumes",
+        "List unhealthy containers",
+        "Restart them",
+        "Report reclaimed space"
+      ],
+      "implementationNote": "Exclude volumes you must keep from pruning.",
+      "keywords": [
+        "docker",
+        "prune",
+        "healthcheck",
+        "ops"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "023",
+      "slug": "log-rotation-compress-ship",
+      "title": "Log rotation + compress + ship",
+      "author": "Community (logrotate)",
+      "source": "https://linux.die.net/man/8/logrotate",
+      "license": "See source",
+      "averageRating": 4.3,
+      "category": {
+        "label": "Automation Scripts",
+        "slug": "scripts"
+      },
+      "platform": "Automation Scripts",
+      "description": "Rotates and compresses app logs and ships archives to object storage.",
+      "useWhen": "When app logs grow unbounded.",
+      "trigger": "Cron (daily)",
+      "steps": [
+        "Rotate + compress logs",
+        "Upload archives to storage",
+        "Apply retention",
+        "Verify free space"
+      ],
+      "implementationNote": "Coordinate with the app's own log handling to avoid gaps.",
+      "keywords": [
+        "logs",
+        "logrotate",
+        "retention",
+        "ops"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "024",
+      "slug": "daily-database-backup-cron",
+      "title": "Daily database backup cron",
+      "author": "Community",
+      "source": "https://www.postgresql.org/docs/current/backup-dump.html",
+      "license": "See source",
+      "averageRating": 4.7,
+      "category": {
+        "label": "Schedules & Cron",
+        "slug": "schedules-cron"
+      },
+      "platform": "Schedules & Cron",
+      "description": "Scheduled pg_dump/mysqldump with rotation and off-box copy.",
+      "useWhen": "Essential alongside any data-changing workflow.",
+      "trigger": "Cron (daily, off-peak)",
+      "steps": [
+        "Dump database",
+        "Compress + timestamp",
+        "Copy off-box",
+        "Rotate old dumps"
+      ],
+      "implementationNote": "Store at least one copy off the host.",
+      "keywords": [
+        "cron",
+        "backup",
+        "postgres",
+        "mysql"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "025",
+      "slug": "hourly-inbox-rss-poll",
+      "title": "Hourly inbox/RSS poll",
+      "author": "Community",
+      "source": "https://crontab.guru/",
+      "license": "See source",
+      "averageRating": 4.2,
+      "category": {
+        "label": "Schedules & Cron",
+        "slug": "schedules-cron"
+      },
+      "platform": "Schedules & Cron",
+      "description": "A cron schedule that polls inboxes/feeds to drive downstream automations.",
+      "useWhen": "When a workflow needs periodic fetches.",
+      "trigger": "Cron (hourly)",
+      "steps": [
+        "Fetch new items",
+        "Hand off to the workflow",
+        "Record last-seen cursor",
+        "Backoff on errors"
+      ],
+      "implementationNote": "Keep a cursor to avoid reprocessing.",
+      "keywords": [
+        "cron",
+        "polling",
+        "rss",
+        "schedule"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "026",
+      "slug": "weekly-dependency-update-pr",
+      "title": "Weekly dependency update + PR",
+      "author": "Renovate/Dependabot pattern",
+      "source": "https://docs.renovatebot.com/",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "Schedules & Cron",
+        "slug": "schedules-cron"
+      },
+      "platform": "Schedules & Cron",
+      "description": "Scheduled dependency upgrades that open a PR and run CI before merge.",
+      "useWhen": "When you want safe, steady dependency hygiene.",
+      "trigger": "Schedule (weekly)",
+      "steps": [
+        "Scan manifests for updates",
+        "Open grouped PRs",
+        "Run CI",
+        "Auto-merge if green"
+      ],
+      "implementationNote": "Group minor/patch updates to reduce PR noise.",
+      "keywords": [
+        "renovate",
+        "dependabot",
+        "ci",
+        "schedule"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "027",
+      "slug": "github-actions-scheduled-ci-sweep",
+      "title": "GitHub Actions scheduled CI sweep",
+      "author": "GitHub Docs",
+      "source": "https://docs.github.com/actions",
+      "license": "See source",
+      "averageRating": 4.6,
+      "category": {
+        "label": "Other Platforms",
+        "slug": "other-platforms"
+      },
+      "platform": "Other Platforms",
+      "description": "A scheduled workflow that runs tests/lint/security sweeps and reports results.",
+      "useWhen": "When you want recurring checks beyond push events.",
+      "trigger": "schedule: cron in workflow",
+      "steps": [
+        "Define on.schedule cron",
+        "Run test/lint/security jobs",
+        "Upload artifacts",
+        "Notify on failure"
+      ],
+      "implementationNote": "Scheduled runs use the default branch's workflow file.",
+      "keywords": [
+        "github actions",
+        "ci",
+        "schedule",
+        "cron"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    },
+    {
+      "number": "028",
+      "slug": "airflow-daily-etl-dag",
+      "title": "Airflow daily ETL DAG",
+      "author": "Apache Airflow Docs",
+      "source": "https://airflow.apache.org/",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Other Platforms",
+        "slug": "other-platforms"
+      },
+      "platform": "Other Platforms",
+      "description": "An orchestrated daily extract-transform-load pipeline with retries and alerting.",
+      "useWhen": "When data pipelines need dependable scheduling + retries.",
+      "trigger": "Airflow schedule (daily)",
+      "steps": [
+        "Extract from sources",
+        "Transform/validate",
+        "Load to warehouse",
+        "Alert on SLA miss"
+      ],
+      "implementationNote": "Make tasks idempotent so retries are safe.",
+      "keywords": [
+        "airflow",
+        "etl",
+        "dag",
+        "data pipeline"
+      ],
+      "published": "2026-06-20",
+      "modified": "2026-06-20",
+      "reviews": []
+    }
+  ]
+}

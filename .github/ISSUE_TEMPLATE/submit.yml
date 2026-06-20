@@ -1,0 +1,61 @@
+name: "➕ Submit an Automation"
+description: "Add an n8n / Make.com / Zapier / script / cron automation to the Automation Bazaar."
+title: "[Automation] <name>"
+labels: ["submission", "automation"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for contributing to **Automation-Bazaar**! Always credit the original author/source. No copied workflow files — we link to the source."
+  - type: input
+    id: name
+    attributes:
+      label: Automation name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Platform / Category
+      options: [n8n, make-com, zapier, scripts, schedules-cron, other-platforms]
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL (template/repo/blog)
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author / credit
+    validations:
+      required: true
+  - type: input
+    id: trigger
+    attributes:
+      label: Trigger
+      placeholder: "e.g. New email in Gmail / webhook / cron daily"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps (one per line)
+    validations:
+      required: true
+  - type: input
+    id: note
+    attributes:
+      label: Note / gotcha
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I provided the source + author; this is properly attributed.
+          required: true
+        - label: I did not paste any secrets/API keys.
+          required: true
