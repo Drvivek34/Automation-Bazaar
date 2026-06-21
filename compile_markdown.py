@@ -22,6 +22,7 @@ def compile_markdown():
 
     r = []
     r.append("# ⚙️ Automation-Bazaar: The Curated Automation Workflows Directory")
+    r.append("\n[![Mega AI Bazaar](https://img.shields.io/badge/🌐_Mega_AI_Bazaar-browse_all-6C5CE7)](https://drvivek34.github.io/Mega-AI-Bazaar/)")
     r.append(f"\nWelcome to **Automation-Bazaar** — a categorized, community-rated directory of **{total}** "
              "ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. "
              "Every entry links to its original source and keeps its author — no workflow files are copied here.")
