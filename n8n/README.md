@@ -1,6 +1,6 @@
 # n8n Automations — Automation-Bazaar
 
-13 automations in **n8n**. [← Back to master directory](../README.md)
+14 automations in **n8n**. [← Back to master directory](../README.md)
 
 | ID | Title | Author | Rating | Notes / Use Cases |
 |---|---|---|---|---|
@@ -17,3 +17,4 @@
 | #031 | [Translate Telegram audio messages with AI (55 languages)](translate-telegram-audio-messages-with-ai-55-languages.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Receives audio/voice messages in Telegram, transcribes them using speech-to-text (Whisper), translates them into 55 support languages, and replies back. |
 | #032 | [Hacker News Throwback Machine](hacker-news-throwback-machine.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Cuts through the noise to fetch the top-voted Hacker News posts from exactly 1, 2, 5, or 10 years ago today. |
 | #033 | [Siri AI Agent with Apple Shortcuts](siri-ai-agent-with-apple-shortcuts.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Bridges iOS Siri voice shortcuts to a powerful agentic backend in n8n, enabling deep custom commands via voice. |
+| #034 | [OpenAI-Powered Tweet Generator](openai-powered-tweet-generator.md) | Awesome n8n Templates | ★★★★☆ 4.5 | Monitors RSS feeds for new tech articles, extracts key points, generates engaging tweets using OpenAI GPT models, and auto-posts them to Twitter/X. |

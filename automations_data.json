@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-20",
-  "loopCount": 33,
+  "loopCount": 37,
   "categories": [
     {
       "slug": "n8n",
@@ -1119,6 +1119,143 @@
       "implementationNote": "Requires setting up an Apple Shortcut to capture audio and trigger the webhook.",
       "published": "2026-06-20",
       "modified": "2026-06-20"
+    },
+    {
+      "number": "034",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "OpenAI-Powered Tweet Generator",
+      "slug": "openai-powered-tweet-generator",
+      "author": "Awesome n8n Templates",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Social_Media/OpenAI-powered%20tweet%20generator.json",
+      "license": "MIT",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Monitors RSS feeds for new tech articles, extracts key points, generates engaging tweets using OpenAI GPT models, and auto-posts them to Twitter/X.",
+      "useWhen": "When you want to maintain a consistent social media presence without writing daily content manual drafts.",
+      "trigger": "RSS Feed Trigger",
+      "steps": [
+        "Trigger when a new item is published to RSS feed.",
+        "Parse article content and summarize using OpenAI node.",
+        "Formulate punchy tweet with hashtags.",
+        "Post to Twitter/X using the Twitter node."
+      ],
+      "keywords": [
+        "openai",
+        "twitter",
+        "tweet",
+        "rss",
+        "automation"
+      ],
+      "implementationNote": "Requires RSS URL, OpenAI API Key, and Twitter OAuth credentials.",
+      "published": "2026-06-21",
+      "modified": "2026-06-21"
+    },
+    {
+      "number": "035",
+      "category": {
+        "slug": "zapier",
+        "label": "Zapier"
+      },
+      "platform": "zapier",
+      "title": "GitHub Release Notification to Slack",
+      "slug": "github-release-notification-to-slack",
+      "author": "Zapier Community Templates",
+      "source": "https://zapier.com/apps/github/integrations/slack",
+      "license": "MIT",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "Auto-detects new releases in a specific GitHub repository and posts a formatted message with release notes directly to a Slack channel.",
+      "useWhen": "To keep development and product teams informed of software releases in real time.",
+      "trigger": "New Release in GitHub Repository",
+      "steps": [
+        "Monitor GitHub repo for a new release event.",
+        "Extract release name, tag, and description changelog.",
+        "Send message using Slack Integration to specified channel."
+      ],
+      "keywords": [
+        "github",
+        "slack",
+        "release",
+        "notifications",
+        "chatops"
+      ],
+      "implementationNote": "Set up webhook events on GitHub for clean webhook response delivery.",
+      "published": "2026-06-21",
+      "modified": "2026-06-21"
+    },
+    {
+      "number": "036",
+      "category": {
+        "slug": "scripts",
+        "label": "Scripts"
+      },
+      "platform": "scripts",
+      "title": "PostgreSQL Backup to AWS S3",
+      "slug": "postgresql-backup-to-aws-s3",
+      "author": "DevOps Cron Scripts",
+      "source": "https://github.com/awesome-scripts/postgres-s3-backup",
+      "license": "MIT",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "A robust shell script designed to be scheduled via cron that performs a pg_dump, compresses the database archive, and uploads it safely to an AWS S3 bucket.",
+      "useWhen": "To secure off-site backups of production PostgreSQL databases automatically.",
+      "trigger": "Scheduled System Cron (Daily at 02:00 AM)",
+      "steps": [
+        "Dump PostgreSQL database schemas and records.",
+        "Compress dump file using gzip format.",
+        "Upload file to target AWS S3 bucket via AWS CLI.",
+        "Clean up local file archives to prevent disk filling."
+      ],
+      "keywords": [
+        "postgres",
+        "backup",
+        "s3",
+        "aws",
+        "cron",
+        "bash"
+      ],
+      "implementationNote": "Requires aws-cli config credentials and pg_dump tools installed locally.",
+      "published": "2026-06-21",
+      "modified": "2026-06-21"
+    },
+    {
+      "number": "037",
+      "category": {
+        "slug": "schedules-cron",
+        "label": "Schedules & Cron"
+      },
+      "platform": "schedules-cron",
+      "title": "Airflow Multi-Stage dbt Pipeline Trigger",
+      "slug": "airflow-multi-stage-dbt-pipeline-trigger",
+      "author": "Data Engineering Patterns",
+      "source": "https://github.com/airflow-templates/dbt-pipeline-dag",
+      "license": "MIT",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "An Apache Airflow DAG that schedules and orchestrates multi-stage dbt (data build tool) transformations, generating database schemas and verifying testing runs.",
+      "useWhen": "To orchestrate scheduled data warehouse loads and quality assertions.",
+      "trigger": "Cron Schedule (Every weekday at 06:00 AM)",
+      "steps": [
+        "Start Airflow DAG run.",
+        "Execute dbt source freshness tests.",
+        "Trigger dbt run command across models.",
+        "Assert database quality constraints via dbt test.",
+        "Trigger Slack alert on failure nodes."
+      ],
+      "keywords": [
+        "airflow",
+        "dbt",
+        "dag",
+        "data-engineering",
+        "cron"
+      ],
+      "implementationNote": "Configure Airflow variables to resolve database passwords securely.",
+      "published": "2026-06-21",
+      "modified": "2026-06-21"
     }
   ]
 }

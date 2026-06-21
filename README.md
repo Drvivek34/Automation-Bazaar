@@ -2,7 +2,7 @@
 
 [![Mega AI Bazaar](https://img.shields.io/badge/🌐_Mega_AI_Bazaar-browse_all-6C5CE7)](https://drvivek34.github.io/Mega-AI-Bazaar/)
 
-Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **33** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
+Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **37** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
 
 *Last updated: 2026-06-20 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
 
@@ -57,6 +57,10 @@ Sorted by rating. Click a title for full setup details.
 | #031 | n8n | [Translate Telegram audio messages with AI (55 languages)](n8n/translate-telegram-audio-messages-with-ai-55-languages.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Receives audio/voice messages in Telegram, transcribes them using speech-to-text (Whisper), translates them into 55 support languages, and replies back. |
 | #032 | n8n | [Hacker News Throwback Machine](n8n/hacker-news-throwback-machine.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Cuts through the noise to fetch the top-voted Hacker News posts from exactly 1, 2, 5, or 10 years ago today. |
 | #033 | n8n | [Siri AI Agent with Apple Shortcuts](n8n/siri-ai-agent-with-apple-shortcuts.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Bridges iOS Siri voice shortcuts to a powerful agentic backend in n8n, enabling deep custom commands via voice. |
+| #034 | n8n | [OpenAI-Powered Tweet Generator](n8n/openai-powered-tweet-generator.md) | Awesome n8n Templates | ★★★★☆ 4.5 | Monitors RSS feeds for new tech articles, extracts key points, generates engaging tweets using OpenAI GPT models, and auto-posts them to Twitter/X. |
+| #035 | Zapier | [GitHub Release Notification to Slack](zapier/github-release-notification-to-slack.md) | Zapier Community Templates | ★★★★☆ 4.5 | Auto-detects new releases in a specific GitHub repository and posts a formatted message with release notes directly to a Slack channel. |
+| #036 | Scripts | [PostgreSQL Backup to AWS S3](scripts/postgresql-backup-to-aws-s3.md) | DevOps Cron Scripts | ★★★★☆ 4.5 | A robust shell script designed to be scheduled via cron that performs a pg_dump, compresses the database archive, and uploads it safely to an AWS S3 bucket. |
+| #037 | Schedules & Cron | [Airflow Multi-Stage dbt Pipeline Trigger](schedules-cron/airflow-multi-stage-dbt-pipeline-trigger.md) | Data Engineering Patterns | ★★★★☆ 4.5 | An Apache Airflow DAG that schedules and orchestrates multi-stage dbt (data build tool) transformations, generating database schemas and verifying testing runs. |
 | #008 | n8n | [WhatsApp inbound automation](n8n/whatsapp-inbound-automation.md) | n8n community | ★★★★☆ 4.4 | Handles inbound WhatsApp messages, routes by intent, and replies or creates a ticket. |
 | #011 | Make.com | [Email parser → Airtable](make-com/email-parser-airtable.md) | Make Templates | ★★★★☆ 4.4 | Parses structured emails (orders, alerts) and writes records into Airtable. |
 | #013 | Make.com | [Multi-channel social scheduler](make-com/multi-channel-social-scheduler.md) | Make Templates | ★★★★☆ 4.4 | Takes a content row and publishes/schedules it across several social platforms. |
@@ -67,11 +71,11 @@ Sorted by rating. Click a title for full setup details.
 | #025 | Schedules & Cron | [Hourly inbox/RSS poll](schedules-cron/hourly-inbox-rss-poll.md) | Community | ★★★★☆ 4.2 | A cron schedule that polls inboxes/feeds to drive downstream automations. |
 
 ## 🗂️ Categories
-- [n8n](n8n/README.md) (13)
+- [n8n](n8n/README.md) (14)
 - [Make.com](make-com/README.md) (5)
-- [Zapier](zapier/README.md) (6)
-- [Automation Scripts](scripts/README.md) (4)
-- [Schedules & Cron](schedules-cron/README.md) (3)
+- [Zapier](zapier/README.md) (7)
+- [Automation Scripts](scripts/README.md) (5)
+- [Schedules & Cron](schedules-cron/README.md) (4)
 - [Other Platforms](other-platforms/README.md) (2)
 
 ---
