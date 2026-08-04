@@ -2,9 +2,9 @@
 
 [![Mega AI Bazaar](https://img.shields.io/badge/🌐_Mega_AI_Bazaar-browse_all-6C5CE7)](https://drvivek34.github.io/Mega-AI-Bazaar/)
 
-Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **37** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
+Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **41** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
 
-*Last updated: 2026-06-20 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
+*Last updated: 2026-08-04 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
 
 ## 🤝 How to Add a New Automation (GitHub-first)
 We welcome additions — **always credit the original author/source**.
@@ -59,8 +59,12 @@ Sorted by rating. Click a title for full setup details.
 | #033 | n8n | [Siri AI Agent with Apple Shortcuts](n8n/siri-ai-agent-with-apple-shortcuts.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Bridges iOS Siri voice shortcuts to a powerful agentic backend in n8n, enabling deep custom commands via voice. |
 | #034 | n8n | [OpenAI-Powered Tweet Generator](n8n/openai-powered-tweet-generator.md) | Awesome n8n Templates | ★★★★☆ 4.5 | Monitors RSS feeds for new tech articles, extracts key points, generates engaging tweets using OpenAI GPT models, and auto-posts them to Twitter/X. |
 | #035 | Zapier | [GitHub Release Notification to Slack](zapier/github-release-notification-to-slack.md) | Zapier Community Templates | ★★★★☆ 4.5 | Auto-detects new releases in a specific GitHub repository and posts a formatted message with release notes directly to a Slack channel. |
-| #036 | Scripts | [PostgreSQL Backup to AWS S3](scripts/postgresql-backup-to-aws-s3.md) | DevOps Cron Scripts | ★★★★☆ 4.5 | A robust shell script designed to be scheduled via cron that performs a pg_dump, compresses the database archive, and uploads it safely to an AWS S3 bucket. |
-| #037 | Schedules & Cron | [Airflow Multi-Stage dbt Pipeline Trigger](schedules-cron/airflow-multi-stage-dbt-pipeline-trigger.md) | Data Engineering Patterns | ★★★★☆ 4.5 | An Apache Airflow DAG that schedules and orchestrates multi-stage dbt (data build tool) transformations, generating database schemas and verifying testing runs. |
+| #036 | Scripts | [PostgreSQL Backup to AWS S3](scripts/postgresql-backup-to-aws-s3.md) | itbm | ★★★★☆ 4.5 | A robust shell script designed to be scheduled via cron that performs a pg_dump, compresses the database archive, and uploads it safely to an AWS S3 bucket. |
+| #037 | Schedules & Cron | [Airflow 3 + dbt + Snowflake ELT pipeline](schedules-cron/airflow-3-dbt-snowflake-elt-pipeline.md) | Stefen-Taime | ★★★★☆ 4.5 | A production-style multi-stage ELT pipeline using Airflow 3, dbt, Snowflake, GitHub Actions, and observability dashboards, with separate ingestion and transformation DAGs. |
+| #038 | n8n | [AI agent chat](n8n/ai-agent-chat.md) | ScraperNode | ★★★★☆ 4.5 | An importable n8n AI-agent chat workflow from the ScraperNode template catalog, intended as a current starting point for conversational agent automations. |
+| #039 | n8n | [Supabase / Postgres data analyst agent](n8n/supabase-postgres-data-analyst.md) | MinaSaad1 | ★★★★☆ 4.5 | A production-oriented n8n data-analyst agent pattern for querying Supabase or Postgres with shared architecture and security documentation. |
+| #040 | Other Platforms | [Hourly CI fixer and recompile sweep](other-platforms/hourly-ci-fixer-recompile-sweep.md) | GitHub gh-aw contributors | ★★★★☆ 4.5 | A scheduled GitHub Actions maintenance pattern that checks CI, merges the current base branch, recompiles generated workflows only when needed, runs formatting and tests, and opens a PR for fixable issues. |
+| #041 | n8n | [Telegram calendar AI agent with RAG](n8n/telegram-calendar-ai-agent-rag.md) | Fanny-n8n-templates contributors | ★★★★☆ 4.5 | A current n8n automation pattern for conversational scheduling through Telegram with retrieval-augmented context and calendar actions. |
 | #008 | n8n | [WhatsApp inbound automation](n8n/whatsapp-inbound-automation.md) | n8n community | ★★★★☆ 4.4 | Handles inbound WhatsApp messages, routes by intent, and replies or creates a ticket. |
 | #011 | Make.com | [Email parser → Airtable](make-com/email-parser-airtable.md) | Make Templates | ★★★★☆ 4.4 | Parses structured emails (orders, alerts) and writes records into Airtable. |
 | #013 | Make.com | [Multi-channel social scheduler](make-com/multi-channel-social-scheduler.md) | Make Templates | ★★★★☆ 4.4 | Takes a content row and publishes/schedules it across several social platforms. |
@@ -71,12 +75,12 @@ Sorted by rating. Click a title for full setup details.
 | #025 | Schedules & Cron | [Hourly inbox/RSS poll](schedules-cron/hourly-inbox-rss-poll.md) | Community | ★★★★☆ 4.2 | A cron schedule that polls inboxes/feeds to drive downstream automations. |
 
 ## 🗂️ Categories
-- [n8n](n8n/README.md) (14)
+- [n8n](n8n/README.md) (17)
 - [Make.com](make-com/README.md) (5)
 - [Zapier](zapier/README.md) (7)
 - [Automation Scripts](scripts/README.md) (5)
 - [Schedules & Cron](schedules-cron/README.md) (4)
-- [Other Platforms](other-platforms/README.md) (2)
+- [Other Platforms](other-platforms/README.md) (3)
 
 ---
 Part of the **[Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)**. Licensed MIT for structure/text; each automation keeps its original author's license.

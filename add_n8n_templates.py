@@ -2,8 +2,9 @@
 import json
 import os
 import re
+from pathlib import Path
 
-DB_PATH = "/root/bazaars/Automation-Bazaar/automations_data.json"
+DB_PATH = str(Path(__file__).resolve().parent / "automations_data.json")
 
 NEW_TEMPLATES = [
     {

@@ -1,8 +1,8 @@
 # PostgreSQL Backup to AWS S3
 
-**ID** #036 · **Platform/Category** Scripts · **Author** DevOps Cron Scripts · **Rating** ⭐ 4.5/5
+**ID** #036 · **Platform/Category** Scripts · **Author** itbm · **Rating** ⭐ 4.5/5
 
-🔗 **Source:** [https://github.com/awesome-scripts/postgres-s3-backup](https://github.com/awesome-scripts/postgres-s3-backup)  ·  **License:** MIT
+🔗 **Source:** [https://github.com/itbm/postgresql-backup-s3](https://github.com/itbm/postgresql-backup-s3)  ·  **License:** MIT
 
 [← Category index](README.md) · [← Master directory](../README.md)
 
@@ -24,7 +24,7 @@ Scheduled System Cron (Daily at 02:00 AM)
 4. Clean up local file archives to prevent disk filling.
 
 ## ⚠️ Note
-Requires aws-cli config credentials and pg_dump tools installed locally.
+Use a secret manager or workload identity for database and S3 credentials; never commit them.
 
 ## 🏷️ Keywords
 postgres, backup, s3, aws, cron, bash

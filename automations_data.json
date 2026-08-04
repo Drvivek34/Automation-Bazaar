@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-20",
-  "loopCount": 37,
+  "updated": "2026-08-04",
+  "loopCount": 41,
   "categories": [
     {
       "slug": "n8n",
@@ -1130,7 +1130,7 @@
       "title": "OpenAI-Powered Tweet Generator",
       "slug": "openai-powered-tweet-generator",
       "author": "Awesome n8n Templates",
-      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Social_Media/OpenAI-powered%20tweet%20generator.json",
+      "source": "https://github.com/enescingoz/awesome-n8n-templates/blob/main/Instagram_Twitter_Social_Media/OpenAI-powered%20tweet%20generator.json",
       "license": "MIT",
       "averageRating": 4.5,
       "reviews": [],
@@ -1152,7 +1152,7 @@
       ],
       "implementationNote": "Requires RSS URL, OpenAI API Key, and Twitter OAuth credentials.",
       "published": "2026-06-21",
-      "modified": "2026-06-21"
+      "modified": "2026-08-04"
     },
     {
       "number": "035",
@@ -1196,8 +1196,8 @@
       "platform": "scripts",
       "title": "PostgreSQL Backup to AWS S3",
       "slug": "postgresql-backup-to-aws-s3",
-      "author": "DevOps Cron Scripts",
-      "source": "https://github.com/awesome-scripts/postgres-s3-backup",
+      "author": "itbm",
+      "source": "https://github.com/itbm/postgresql-backup-s3",
       "license": "MIT",
       "averageRating": 4.5,
       "reviews": [],
@@ -1218,9 +1218,9 @@
         "cron",
         "bash"
       ],
-      "implementationNote": "Requires aws-cli config credentials and pg_dump tools installed locally.",
+      "implementationNote": "Use a secret manager or workload identity for database and S3 credentials; never commit them.",
       "published": "2026-06-21",
-      "modified": "2026-06-21"
+      "modified": "2026-08-04"
     },
     {
       "number": "037",
@@ -1229,33 +1229,170 @@
         "label": "Schedules & Cron"
       },
       "platform": "schedules-cron",
-      "title": "Airflow Multi-Stage dbt Pipeline Trigger",
-      "slug": "airflow-multi-stage-dbt-pipeline-trigger",
-      "author": "Data Engineering Patterns",
-      "source": "https://github.com/airflow-templates/dbt-pipeline-dag",
-      "license": "MIT",
+      "title": "Airflow 3 + dbt + Snowflake ELT pipeline",
+      "slug": "airflow-3-dbt-snowflake-elt-pipeline",
+      "author": "Stefen-Taime",
+      "source": "https://github.com/Stefen-Taime/snow-airflow-dbt",
+      "license": "See source repository",
       "averageRating": 4.5,
       "reviews": [],
-      "description": "An Apache Airflow DAG that schedules and orchestrates multi-stage dbt (data build tool) transformations, generating database schemas and verifying testing runs.",
-      "useWhen": "To orchestrate scheduled data warehouse loads and quality assertions.",
-      "trigger": "Cron Schedule (Every weekday at 06:00 AM)",
+      "description": "A production-style multi-stage ELT pipeline using Airflow 3, dbt, Snowflake, GitHub Actions, and observability dashboards, with separate ingestion and transformation DAGs.",
+      "useWhen": "To study or adapt a current Airflow + dbt orchestration pattern with freshness checks, transformations, tests, and operational visibility.",
+      "trigger": "Scheduled Airflow DAGs",
       "steps": [
-        "Start Airflow DAG run.",
-        "Execute dbt source freshness tests.",
-        "Trigger dbt run command across models.",
-        "Assert database quality constraints via dbt test.",
-        "Trigger Slack alert on failure nodes."
+        "Ingest the source data into the raw Snowflake layer.",
+        "Trigger the dbt transformation DAG from the orchestration layer.",
+        "Build staging, intermediate, core, and mart models with dbt.",
+        "Run freshness and data-quality checks, then publish dashboards and alerts."
       ],
       "keywords": [
-        "airflow",
+        "airflow 3",
         "dbt",
-        "dag",
-        "data-engineering",
-        "cron"
+        "snowflake",
+        "elt",
+        "data quality",
+        "github actions"
       ],
       "implementationNote": "Configure Airflow variables to resolve database passwords securely.",
       "published": "2026-06-21",
-      "modified": "2026-06-21"
+      "modified": "2026-08-04"
+    },
+    {
+      "number": "038",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "AI agent chat",
+      "slug": "ai-agent-chat",
+      "author": "ScraperNode",
+      "source": "https://github.com/scrapernode/awesome-n8n-templates/tree/main/templates/personal-productivity/1954-ai-agent-chat",
+      "license": "MIT",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "An importable n8n AI-agent chat workflow from the ScraperNode template catalog, intended as a current starting point for conversational agent automations.",
+      "useWhen": "To bootstrap an n8n agent chat and then replace model, memory, tools, and credentials with your own approved services.",
+      "trigger": "Chat or workflow trigger",
+      "steps": [
+        "Import the workflow JSON into n8n.",
+        "Configure the model, memory, and tool credentials.",
+        "Test with read-only sample data before enabling writes.",
+        "Add error handling, cost limits, and authorization checks before production use."
+      ],
+      "keywords": [
+        "n8n",
+        "AI agent",
+        "chatbot",
+        "workflow template"
+      ],
+      "implementationNote": "Review every node and credential reference before activation; the source catalog is the authority for the current template.",
+      "published": "2026-08-04",
+      "modified": "2026-08-04"
+    },
+    {
+      "number": "039",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Supabase / Postgres data analyst agent",
+      "slug": "supabase-postgres-data-analyst",
+      "author": "MinaSaad1",
+      "source": "https://github.com/MinaSaad1/n8n-ai-agents",
+      "license": "MIT",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "A production-oriented n8n data-analyst agent pattern for querying Supabase or Postgres with shared architecture and security documentation.",
+      "useWhen": "When a team needs a natural-language data-analysis workflow with explicit security, output, and testing conventions.",
+      "trigger": "User question or chat trigger",
+      "steps": [
+        "Import the template and configure the database connection with least privilege.",
+        "Review row-level security, query guards, PII masking, and cost caps.",
+        "Test queries against known ground truth and inspect generated SQL.",
+        "Enable writes or scheduled runs only after an explicit safety review."
+      ],
+      "keywords": [
+        "n8n",
+        "Supabase",
+        "Postgres",
+        "data analyst",
+        "SQL",
+        "AI agent"
+      ],
+      "implementationNote": "Treat the source repository's security framework as required reading before connecting production data.",
+      "published": "2026-08-04",
+      "modified": "2026-08-04"
+    },
+    {
+      "number": "040",
+      "category": {
+        "slug": "other-platforms",
+        "label": "Other Platforms"
+      },
+      "platform": "GitHub Actions",
+      "title": "Hourly CI fixer and recompile sweep",
+      "slug": "hourly-ci-fixer-recompile-sweep",
+      "author": "GitHub gh-aw contributors",
+      "source": "https://github.com/github/gh-aw/blob/main/.github/workflows/avenger.md",
+      "license": "See source repository",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "A scheduled GitHub Actions maintenance pattern that checks CI, merges the current base branch, recompiles generated workflows only when needed, runs formatting and tests, and opens a PR for fixable issues.",
+      "useWhen": "To keep a repository's generated workflows and mechanical CI fixes current without creating noisy PRs when CI is already green.",
+      "trigger": "Hourly schedule or manual dispatch",
+      "steps": [
+        "Check the latest completed CI status on the default branch.",
+        "Stop without changes when CI is passing.",
+        "If CI is failing, update from the default branch and recompile only when source workflow files changed.",
+        "Run formatting and tests, then open a reviewable PR with the bounded diff."
+      ],
+      "keywords": [
+        "github actions",
+        "scheduled CI",
+        "workflow recompile",
+        "automated maintenance",
+        "pull request"
+      ],
+      "implementationNote": "Keep the workflow read-only until a reviewed PR is created; pin third-party actions and cap generated diffs.",
+      "published": "2026-08-04",
+      "modified": "2026-08-04"
+    },
+    {
+      "number": "041",
+      "category": {
+        "slug": "n8n",
+        "label": "n8n"
+      },
+      "platform": "n8n",
+      "title": "Telegram calendar AI agent with RAG",
+      "slug": "telegram-calendar-ai-agent-rag",
+      "author": "Fanny-n8n-templates contributors",
+      "source": "https://github.com/Fgrodriguezs/Fanny-n8n-templates",
+      "license": "See source repository",
+      "averageRating": 4.5,
+      "reviews": [],
+      "description": "A current n8n automation pattern for conversational scheduling through Telegram with retrieval-augmented context and calendar actions.",
+      "useWhen": "To prototype appointment scheduling that needs a chat interface, calendar availability, and contextual retrieval.",
+      "trigger": "Telegram message",
+      "steps": [
+        "Receive and normalize the Telegram request.",
+        "Retrieve approved context and available calendar slots.",
+        "Ask the agent to propose or confirm a time without guessing availability.",
+        "Create or update the calendar event only after explicit confirmation and log the result."
+      ],
+      "keywords": [
+        "n8n",
+        "Telegram",
+        "calendar",
+        "RAG",
+        "AI agent",
+        "scheduling"
+      ],
+      "implementationNote": "Use scoped credentials and confirmation gates for calendar writes; adapt the workflow to the source repository current JSON files.",
+      "published": "2026-08-04",
+      "modified": "2026-08-04"
     }
   ]
 }

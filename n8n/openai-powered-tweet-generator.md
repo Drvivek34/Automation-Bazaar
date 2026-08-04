@@ -2,7 +2,7 @@
 
 **ID** #034 · **Platform/Category** n8n · **Author** Awesome n8n Templates · **Rating** ⭐ 4.5/5
 
-🔗 **Source:** [https://github.com/enescingoz/awesome-n8n-templates/blob/main/Social_Media/OpenAI-powered%20tweet%20generator.json](https://github.com/enescingoz/awesome-n8n-templates/blob/main/Social_Media/OpenAI-powered%20tweet%20generator.json)  ·  **License:** MIT
+🔗 **Source:** [https://github.com/enescingoz/awesome-n8n-templates/blob/main/Instagram_Twitter_Social_Media/OpenAI-powered%20tweet%20generator.json](https://github.com/enescingoz/awesome-n8n-templates/blob/main/Instagram_Twitter_Social_Media/OpenAI-powered%20tweet%20generator.json)  ·  **License:** MIT
 
 [← Category index](README.md) · [← Master directory](../README.md)
 

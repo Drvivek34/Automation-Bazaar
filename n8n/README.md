@@ -1,6 +1,6 @@
 # n8n Automations — Automation-Bazaar
 
-14 automations in **n8n**. [← Back to master directory](../README.md)
+17 automations in **n8n**. [← Back to master directory](../README.md)
 
 | ID | Title | Author | Rating | Notes / Use Cases |
 |---|---|---|---|---|
@@ -18,3 +18,6 @@
 | #032 | [Hacker News Throwback Machine](hacker-news-throwback-machine.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Cuts through the noise to fetch the top-voted Hacker News posts from exactly 1, 2, 5, or 10 years ago today. |
 | #033 | [Siri AI Agent with Apple Shortcuts](siri-ai-agent-with-apple-shortcuts.md) | enescingoz (awesome-n8n-templates) | ★★★★☆ 4.5 | Bridges iOS Siri voice shortcuts to a powerful agentic backend in n8n, enabling deep custom commands via voice. |
 | #034 | [OpenAI-Powered Tweet Generator](openai-powered-tweet-generator.md) | Awesome n8n Templates | ★★★★☆ 4.5 | Monitors RSS feeds for new tech articles, extracts key points, generates engaging tweets using OpenAI GPT models, and auto-posts them to Twitter/X. |
+| #038 | [AI agent chat](ai-agent-chat.md) | ScraperNode | ★★★★☆ 4.5 | An importable n8n AI-agent chat workflow from the ScraperNode template catalog, intended as a current starting point for conversational agent automations. |
+| #039 | [Supabase / Postgres data analyst agent](supabase-postgres-data-analyst.md) | MinaSaad1 | ★★★★☆ 4.5 | A production-oriented n8n data-analyst agent pattern for querying Supabase or Postgres with shared architecture and security documentation. |
+| #041 | [Telegram calendar AI agent with RAG](telegram-calendar-ai-agent-rag.md) | Fanny-n8n-templates contributors | ★★★★☆ 4.5 | A current n8n automation pattern for conversational scheduling through Telegram with retrieval-augmented context and calendar actions. |
