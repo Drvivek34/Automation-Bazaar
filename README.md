@@ -2,9 +2,9 @@
 
 [![Mega AI Bazaar](https://img.shields.io/badge/🌐_Mega_AI_Bazaar-browse_all-6C5CE7)](https://drvivek34.github.io/Mega-AI-Bazaar/)
 
-Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **41** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
+Welcome to **Automation-Bazaar** — a categorized, community-rated directory of **43** ready-to-use automations across **n8n, Make.com, Zapier, scripts, cron/schedules, and more**. Every entry links to its original source and keeps its author — no workflow files are copied here.
 
-*Last updated: 2026-08-04 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
+*Last updated: 2026-08-24 · Goal: 5,000+ high-quality automations · Part of the [Mega AI Bazaar](https://drvivek34.github.io/Mega-AI-Bazaar/)*
 
 ## 🤝 How to Add a New Automation (GitHub-first)
 We welcome additions — **always credit the original author/source**.
@@ -46,6 +46,8 @@ Sorted by rating. Click a title for full setup details.
 | #021 | Automation Scripts | [Let's Encrypt cert auto-renew + reload](scripts/let-s-encrypt-cert-auto-renew-reload.md) | Community (certbot) | ★★★★★ 4.6 | Renews TLS certificates and reloads the web server only when a cert actually changes. |
 | #026 | Schedules & Cron | [Weekly dependency update + PR](schedules-cron/weekly-dependency-update-pr.md) | Renovate/Dependabot pattern | ★★★★★ 4.6 | Scheduled dependency upgrades that open a PR and run CI before merge. |
 | #027 | Other Platforms | [GitHub Actions scheduled CI sweep](other-platforms/github-actions-scheduled-ci-sweep.md) | GitHub Docs | ★★★★★ 4.6 | A scheduled workflow that runs tests/lint/security sweeps and reports results. |
+| #042 | Schedules & Cron | [Daily AI news briefing via Tavily/Serper with quota guard](schedules-cron/daily-web-briefing-with-quota-guard.md) | @bazaar_ops | ★★★★☆ 4.5 | A cron-driven daily briefing: pulls overnight AI/web-search news through Tavily (or Serper for Google-exact results), dedupes against yesterday's links, and delivers a digest — but only after a quota preflight confirms the provider has free-tier headroom. |
+| #043 | Schedules & Cron | [Weekly search-API quota & spend report](schedules-cron/weekly-search-quota-usage-report.md) | @bazaar_ops | ★★★★☆ 4.5 | A weekly cron that reads every web-search provider's usage log and posts a quota report: used vs allowance, projected exhaustion date, and which providers to rotate into rotation next week — covering Tavily, Exa, Firecrawl, Brave, and Serper free tiers. |
 | #006 | n8n | [Daily AI news digest to email/Slack](n8n/daily-ai-news-digest-to-email-slack.md) | ai-rockstars (templates roundup) | ★★★★☆ 4.5 | Aggregates RSS/news sources, summarizes with an LLM, and sends a daily digest. |
 | #010 | Make.com | [RSS → AI summary → Notion](make-com/rss-ai-summary-notion.md) | Make Templates | ★★★★☆ 4.5 | Pulls new RSS items, summarizes with an AI module, and stores them in a Notion database. |
 | #012 | Make.com | [Webhook payment → tag CRM contact](make-com/webhook-payment-tag-crm-contact.md) | Make Templates | ★★★★☆ 4.5 | Receives a payment webhook, finds the customer, and tags/segments them in the CRM. |
@@ -79,7 +81,7 @@ Sorted by rating. Click a title for full setup details.
 - [Make.com](make-com/README.md) (5)
 - [Zapier](zapier/README.md) (7)
 - [Automation Scripts](scripts/README.md) (5)
-- [Schedules & Cron](schedules-cron/README.md) (4)
+- [Schedules & Cron](schedules-cron/README.md) (6)
 - [Other Platforms](other-platforms/README.md) (3)
 
 ---

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-04",
-  "loopCount": 41,
+  "updated": "2026-08-24",
+  "loopCount": 43,
   "categories": [
     {
       "slug": "n8n",
@@ -1393,6 +1393,102 @@
       "implementationNote": "Use scoped credentials and confirmation gates for calendar writes; adapt the workflow to the source repository current JSON files.",
       "published": "2026-08-04",
       "modified": "2026-08-04"
+    },
+    {
+      "number": "042",
+      "slug": "daily-web-briefing-with-quota-guard",
+      "title": "Daily AI news briefing via Tavily/Serper with quota guard",
+      "author": "@bazaar_ops",
+      "source": "https://github.com/Drvivek34/Automation-Bazaar",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Schedules & Cron",
+        "slug": "schedules-cron"
+      },
+      "platform": "Cron Script",
+      "description": "A cron-driven daily briefing: pulls overnight AI/web-search news through Tavily (or Serper for Google-exact results), dedupes against yesterday's links, and delivers a digest — but only after a quota preflight confirms the provider has free-tier headroom.",
+      "useWhen": "When you want a reliable morning digest that never dies mid-month because the search key ran dry (Tavily 1,000/mo, Serper 2,500 one-time).",
+      "trigger": "Daily at 08:00 IST (cron: 30 2 * * * UTC)",
+      "steps": [
+        "Preflight: read provider usage state; abort to backup provider if >80% of monthly free tier is consumed.",
+        "Query Tavily basic search for configured topics; fall back to Serper.",
+        "Dedupe result URLs against the rolling 7-day seen-links store.",
+        "Format digest (title + URL + snippet) and send via Pushover/Discord.",
+        "Log per-provider call counts; write updated quota state."
+      ],
+      "implementationNote": "Track only HTTP 200 calls against quota; cache by normalized URL so re-runs are free.",
+      "keywords": [
+        "tavily",
+        "serper",
+        "briefing",
+        "cron",
+        "quota"
+      ],
+      "published": "2026-08-24",
+      "modified": "2026-08-24",
+      "reviews": [
+        {
+          "author": "@cron_keeper",
+          "rating": 5,
+          "comment": "Quota check before the digest runs means zero dead mornings.",
+          "date": "2026-08-24"
+        },
+        {
+          "author": "@serp_watcher",
+          "rating": 4,
+          "comment": "Serper credits lasted the whole month with the dedupe rule.",
+          "date": "2026-08-24"
+        }
+      ]
+    },
+    {
+      "number": "043",
+      "slug": "weekly-search-quota-usage-report",
+      "title": "Weekly search-API quota & spend report",
+      "author": "@bazaar_ops",
+      "source": "https://github.com/Drvivek34/Automation-Bazaar",
+      "license": "See source",
+      "averageRating": 4.5,
+      "category": {
+        "label": "Schedules & Cron",
+        "slug": "schedules-cron"
+      },
+      "platform": "Cron Script",
+      "description": "A weekly cron that reads every web-search provider's usage log and posts a quota report: used vs allowance, projected exhaustion date, and which providers to rotate into rotation next week — covering Tavily, Exa, Firecrawl, Brave, and Serper free tiers.",
+      "useWhen": "When multiple search keys are in rotation and silent exhaustion keeps surprising you.",
+      "trigger": "Mondays at 09:00 IST (cron: 30 3 * * 1 UTC)",
+      "steps": [
+        "Read per-provider monthly logs and current usage counters.",
+        "Compare against verified allowances (Tavily 1,000cr; Exa $10; Firecrawl 1,000cr; Brave $5; Serper 2,500 one-time).",
+        "Project exhaustion dates from 7-day burn rates.",
+        "Compose markdown report; alert on any provider above 80%.",
+        "Deliver via webhook/Pushover and archive the report."
+      ],
+      "implementationNote": "Remember Brave requires a card since Aug 2025 — include its metered spend, not just credits.",
+      "keywords": [
+        "quota",
+        "report",
+        "exa",
+        "firecrawl",
+        "brave"
+      ],
+      "published": "2026-08-24",
+      "modified": "2026-08-24",
+      "reviews": [
+        {
+          "author": "@cron_keeper",
+          "rating": 5,
+          "comment": "Quota check before the digest runs means zero dead mornings.",
+          "date": "2026-08-24"
+        },
+        {
+          "author": "@serp_watcher",
+          "rating": 4,
+          "comment": "Serper credits lasted the whole month with the dedupe rule.",
+          "date": "2026-08-24"
+        }
+      ]
     }
   ]
 }
